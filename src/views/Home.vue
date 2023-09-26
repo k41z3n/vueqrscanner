@@ -1,6 +1,7 @@
 <template>
   <!-- <HelloWorld /> -->
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+  <h5>{{ code || "READ A CODEBAR" }}</h5>
 </template>
 
 <script setup>
@@ -15,7 +16,7 @@ const onDecode = (text) => {
   console.log(`Decode text from QR code is ${text}`)
 }
 const onLoaded = () => {
-  
+
   console.log(`Ready to start scanning barcodes`)
 }
 
