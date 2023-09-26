@@ -1,5 +1,6 @@
 <template>
   <router-view />
+  
   <v-snackbar
     v-model="snackbar"
     color="primary"
@@ -22,6 +23,9 @@
 import { ref, watchEffect } from "vue";
 import { useRegisterSW } from "virtual:pwa-register/vue";
 const snackbar = ref(true);
+
+
+
 const { needRefresh, updateServiceWorker } = useRegisterSW();
 
 watchEffect(() => {

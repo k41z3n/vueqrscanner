@@ -2,6 +2,8 @@
   <!-- <HelloWorld /> -->
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
   <v-alert class="text-center">{{ code || "READ A CODEBAR" }}</v-alert>
+  <br>
+  <h6 class=text-center>{{ version }}</h6>
 </template>
 
 <script setup>
@@ -10,6 +12,8 @@ import { ref } from "vue";
 import { StreamBarcodeReader } from "vue-barcode-reader";
 
 const code = ref(null);
+
+const version = __APP_VERSION__
 
 const onDecode = (text) => {
   code.value = text;

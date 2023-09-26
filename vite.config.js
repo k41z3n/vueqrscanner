@@ -8,6 +8,8 @@ import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
 
+const version = process.env.npm_package_version;
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -82,7 +84,7 @@ export default defineConfig({
       },
     }),
   ],
-  define: { "process.env": {} },
+  define: { "process.env": {}, __APP_VERSION__: JSON.stringify(version), },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
