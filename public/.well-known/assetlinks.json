@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.vueqrscanner.twa",
+        "sha256_cert_fingerprints": ["04:57:C9:6C:29:CE:50:B4:EF:A0:1A:36:7E:69:84:0F:DA:2A:49:D4:F7:24:49:8A:CE:37:5B:A0:2E:3A:7C:01"]
+      }
+    }]
