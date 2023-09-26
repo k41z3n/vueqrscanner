@@ -1,7 +1,7 @@
 <template>
   <!-- <HelloWorld /> -->
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
-  <h5>{{ code || "READ A CODEBAR" }}</h5>
+  <v-alert class="text-center">{{ code || "READ A CODEBAR" }}</v-alert>
 </template>
 
 <script setup>
