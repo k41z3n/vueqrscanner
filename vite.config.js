@@ -52,7 +52,7 @@ export default defineConfig({
           url: "/index.html",
           experimental_back_button: true,
         },
-        orientation :"any",
+        orientation :"portrait",
         icons: [
           {
             src: "/assets/android/android-launchericon-192-192.png",
